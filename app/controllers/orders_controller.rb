@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
   end
 
   def new
+    # flash[:notice] = "Notice"
   end
-  
+
 end
