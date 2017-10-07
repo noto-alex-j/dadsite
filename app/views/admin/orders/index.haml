@@ -1,0 +1,23 @@
+.row
+  .col-sm-12
+    %h1 All Orders
+    %p= link_to "New Order", new_order_path, class: "btn btn-primary"
+
+.row
+  .col-sm-12
+    %table.table
+      %thead
+        %tr
+          %th Name
+          %th Company
+          %th Address
+          %th Phone
+          %th Items
+      %tbody
+        - @orders.each do |order|
+          %tr
+            %td= order.name
+            %td= order.company
+            %td= order.address
+            %td= order.phone
+            %td= order.items.map(&:name).join(", ")
