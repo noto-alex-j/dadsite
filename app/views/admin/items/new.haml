@@ -1,0 +1,13 @@
+.row
+  .col-sm-12
+    %h1 New Item
+
+.row
+  .col-sm-12
+    = simple_form_for [:admin, @item] do |f|
+      = f.input :name
+      = f.input :description
+      = f.input :unit_quantity
+      = f.input :unit_cost, label: "Unit Cost: $"
+      = f.input :available
+      = f.submit

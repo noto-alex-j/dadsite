@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   get '/' => 'orders#new'
 
-  # namespace :admin do
+  namespace :admin do
   #   resources :orders
-  # end
+    resources :items
+  end
 
   resources :orders
 end

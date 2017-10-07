@@ -1,0 +1,23 @@
+.row
+  .col-sm-12
+    %h1 All Items
+    %p= link_to "New Item", new_admin_item_path, class: "btn btn-primary"
+
+.row
+  .col-sm-12
+    %table.table
+      %thead
+        %tr
+          %th Name
+          %th Description
+          %th Unit Quantity
+          %th Unit Cost
+          %th Available?
+      %tbody
+        - @items.each do |item|
+          %tr
+            %td= item.name
+            %td= item.description
+            %td= item.unit_quantity
+            %td= item.unit_cost
+            %td= item.available
