@@ -8,9 +8,5 @@
   .col-sm-12
     = simple_form_for @order do |f|
       = f.association :items, collection: Item.all
-      = f.input :name
-      = f.input :company
-      = f.input :address
-      = f.input :phone, as: :tel
       = f.input :needed_by
       = f.submit "Submit Order", class: "btn btn-primary"

@@ -16,8 +16,8 @@
       %tbody
         - @orders.each do |order|
           %tr
-            %td= order.name
-            %td= order.company
-            %td= order.address
-            %td= order.phone
+            %td= order.user.name
+            %td= order.user.company
+            %td= order.user.address
+            %td= order.user.phone
             %td= order.items.map(&:name).join(", ")

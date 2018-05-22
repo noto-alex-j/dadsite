@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
   end
 
   def new
-    # flash[:notice] = "Notice"
     @order = Order.new
   end
 

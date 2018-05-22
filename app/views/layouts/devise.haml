@@ -8,8 +8,10 @@
   %body
     -if flash[:notice]
       %p= flash[:notice]
-    -elsif flash[:alert]
-      %p= flash[:alert]
 
-    = link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary"
-    = yield
+    .container
+      .row
+        .col-sm-3
+        .col-sm-8
+          .devise-container
+            = yield
